@@ -1,7 +1,6 @@
-
 import Head from 'next/head';
-import Navbar from './components/Navbar'; 
-import Hero from './components/Hero';
+import Navbar from './components/navbar'; 
+import Hero from './components/hero';
 import SobreMi from './components/sobremi';
 import ContactForm from './components/ContactForm';
 

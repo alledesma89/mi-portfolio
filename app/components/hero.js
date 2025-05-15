@@ -232,96 +232,161 @@ const Hero = () => {
   modules={[Pagination]}
   className="rounded-lg overflow-hidden"
 >
-  {/* Slide 1: Profesionalidad SEO General */}
+  {/* Slide 1: Estrategia de Captación de Leads */}
   <SwiperSlide>
     <div className="flex flex-col md:flex-row gap-6 items-center bg-white text-black p-6 rounded-lg">
       <div className="w-full md:w-1/2">
-        <img src="/media/analitycs.png" alt="SEO Profesional" className="w-full h-64 object-cover rounded-lg" />
+        <img src="/media/analitycs.png" alt="Lead Generation" className="w-full h-64 object-cover rounded-lg" />
       </div>
       <div className="md:w-1/2">
-        <h3 className="text-2xl font-bold mb-3">Posicionamiento SEO Profesional</h3>
+        <h3 className="text-2xl font-bold mb-3">Estrategia de Captación de Leads</h3>
         <p className="text-sm mb-3">
-          Experiencia demostrada en la implementación de estrategias SEO integrales: desde la auditoría técnica hasta la ejecución de planes de contenido y link building. 
+          Diseño y ejecución de campañas digitales centradas en la conversión, orientadas a generar leads cualificados mediante canales orgánicos y de pago.
         </p>
         <ul className="text-sm list-disc pl-5">
-          <li>Auditorías SEO con herramientas como Screaming Frog y Ahrefs</li>
-          <li>Optimización de Core Web Vitals y arquitectura web</li>
-          <li>Creación de árboles semánticos y clusters de contenido</li>
-          <li>Consultoría en SEO local para negocios físicos</li>
+          <li>Creación de landing pages optimizadas para conversión (CRO)</li>
+          <li>Lead magnets estratégicos (ebooks, demos, webinars...)</li>
+          <li>Integración con CRM para nurturing y lead scoring</li>
+          <li>Campañas multicanal: SEO, SEM, Meta Ads y LinkedIn Ads</li>
         </ul>
       </div>
     </div>
   </SwiperSlide>
 
-  {/* Slide 2: SEO Técnico y On-Page */}
+  {/* Slide 2: Automatización y Funnels de Conversión */}
   <SwiperSlide>
     <div className="flex flex-col md:flex-row gap-6 items-center bg-white text-black p-6 rounded-lg">
       <div className="w-full md:w-1/2">
-        <img src="/media/seo.png" alt="SEO Técnico" className="w-full h-64 object-cover rounded-lg" />
+        <img src="/media/seo.png" alt="Funnels y Automatización" className="w-full h-64 object-cover rounded-lg" />
       </div>
       <div className="md:w-1/2">
-        <h3 className="text-2xl font-bold mb-3">SEO Técnico y On-Page</h3>
+        <h3 className="text-2xl font-bold mb-3">Funnels y Automatización</h3>
         <p className="text-sm mb-3">
-          Optimización de rendimiento web, estructura de datos y SEO on-page preciso para mejorar indexación y posicionamiento.
+          Diseño de embudos de conversión automatizados que segmentan y calientan leads de forma inteligente hasta que están listos para la venta.
         </p>
         <ul className="text-sm list-disc pl-5">
-          <li>Implementación de Schema Markup y datos estructurados</li>
-          <li>Optimización de velocidad con lazy loading, minificación y cacheado</li>
-          <li>Estrategia de etiquetas Hn, title y metadescripciones</li>
-          <li>URLs limpias, jerarquía lógica y breadcrumbs configurados</li>
+          <li>Automatización de emails (Mailchimp, ActiveCampaign...)</li>
+          <li>Lead scoring basado en comportamiento e interacción</li>
+          <li>Secuencias de nurturing personalizadas por etapa</li>
+          <li>Optimización de tasas de conversión en cada fase del funnel</li>
         </ul>
       </div>
     </div>
   </SwiperSlide>
 
-  {/* Slide 3: Estrategias de Contenido y Audiencia */}
+  {/* Slide 3: Análisis y Optimización de Campañas */}
   <SwiperSlide>
     <div className="flex flex-col md:flex-row gap-6 items-center bg-white text-black p-6 rounded-lg">
       <div className="w-full md:w-1/2">
-        <img src="/media/semrush.png" alt="SEO de Contenidos" className="w-full h-64 object-cover rounded-lg" />
+        <img src="/media/semrush.png" alt="Análisis de Leads" className="w-full h-64 object-cover rounded-lg" />
       </div>
       <div className="md:w-1/2">
-        <h3 className="text-2xl font-bold mb-3">Estrategias de Contenido y Audiencia</h3>
+        <h3 className="text-2xl font-bold mb-3">Análisis y Optimización de Campañas</h3>
         <p className="text-sm mb-3">
-          Creación y planificación de contenido dirigido a diferentes etapas del funnel de conversión, maximizando visibilidad y engagement.
+          Monitorización constante del rendimiento para escalar campañas con ROI positivo, basado en datos y pruebas A/B continuas.
         </p>
         <ul className="text-sm list-disc pl-5">
-          <li>Estudios de keywords con intención de búsqueda</li>
-          <li>Calendarios editoriales alineados con tendencias</li>
-          <li>Uso de herramientas como Semrush, Ubersuggest, AnswerThePublic</li>
-          <li>Segmentación de audiencia y buyer persona</li>
+          <li>KPIs clave: CPL, tasa de conversión, CAC, LTV</li>
+          <li>Uso de dashboards dinámicos (GA4, Looker Studio...)</li>
+          <li>Test A/B de elementos clave: CTA, headlines, formularios</li>
+          <li>Revisión continua del funnel para identificar cuellos de botella</li>
         </ul>
       </div>
     </div>
   </SwiperSlide>
+
+  {/* Slide 4: Experiencia con marcas */}
+  <SwiperSlide>
+    <div className="flex flex-col md:flex-row gap-8 items-center bg-white text-black p-6 rounded-lg max-w-5xl mx-auto">
+      <div className="flex flex-wrap justify-center items-center gap-6 md:w-1/2">
+        <img src="/media/kampaoh.png" alt="Kampaoh" className="h-10 object-contain" />
+        <img src="/media/amovens.png" alt="Amovens" className="h-10 object-contain" />
+        <img src="/media/tulipan.png" alt="Tulipán" className="h-10 object-contain" />
+        <img src="/media/pymes.png" alt="PYMEs" className="h-10 object-contain" />
+      </div>
+
+      <div className="md:w-1/2 text-center md:text-left">
+        <h3 className="text-2xl font-bold mb-3">Generación de Leads para Marcas y PYMEs</h3>
+        <p className="text-sm mb-3">
+          He colaborado en campañas de captación de leads para <strong>Kampaoh</strong>, <strong>Amovens</strong> y <strong>Tulipán</strong>, aplicando estrategias escalables tanto para grandes marcas como para negocios locales.
+        </p>
+        <ul className="text-sm list-disc pl-5 text-left mx-auto md:mx-0 max-w-md">
+          <li>Configuración de campañas lead-gen con enfoque local y nacional</li>
+          <li>Segmentación avanzada por buyer persona y comportamiento</li>
+          <li>Optimización de formularios y landing pages para mayor conversión</li>
+          <li>Colaboración con equipos internos de ventas y CRM</li>
+        </ul>
+      </div>
+    </div>
+  </SwiperSlide>
+    {/* Slide 5: Experiencia concreta */}
  <SwiperSlide>
-  <div className="flex flex-col md:flex-row gap-8 items-center bg-white text-black p-6 rounded-lg max-w-5xl mx-auto">
-    {/* Logos de marcas */}
-    <div className="flex flex-wrap justify-center items-center gap-6 md:w-1/2">
-      <img src="/media/kampaoh.png" alt="Kampaoh" className="h-10 object-contain" />
-      <img src="/media/amovens.png" alt="Amovens" className="h-10 object-contain" />
-      <img src="/media/tulipan.png" alt="Tulipán" className="h-10 object-contain" />
-      <img src="/media/pymes.png" alt="PYMEs" className="h-10 object-contain" />
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 bg-white text-black p-6 rounded-lg">
+    {/* Card 1: Alex Rosales (EresCambio) */}
+    <div className="bg-white rounded-xl shadow-md p-4 space-y-3">
+      <img src="/media/seo1.png" alt="Campaña Kit Digital" className="w-full h-40 object-cover rounded-md" />
+      <h3 className="text-lg font-bold">Kit Digital – Alex Rosales (EresCambio)</h3>
+      <p className="text-sm">Captación de autónomos y micropymes para acceder al Kit Digital.</p>
+      <ul className="list-disc text-sm pl-5">
+        <li>+620 leads en 5 semanas</li>
+        <li>CPL: 2,90€</li>
+        <li>Embudo automatizado con Mailchimp</li>
+        <li>Lead magnet descargable</li>
+      </ul>
+      <p className="text-xs italic">"Resultados muy por encima de nuestras expectativas" – Alex Rosales</p>
     </div>
 
-    {/* Descripción de experiencia */}
-    <div className="md:w-1/2 text-center md:text-left">
-      <h3 className="text-2xl font-bold mb-3">Colaboraciones SEO con Grandes Marcas y PYMEs</h3>
-      <p className="text-sm mb-3">
-        He trabajado en campañas SEO para marcas como <strong>Kampaoh</strong>, <strong>Amovens</strong> y <strong>Tulipán</strong>, además de proyectos personalizados para pequeñas empresas como restaurantes, gestorías, y alojamientos turísticos.
-      </p>
-      <ul className="text-sm list-disc pl-5 text-left mx-auto md:mx-0 max-w-md">
-        <li>Estrategia de posicionamiento local en Google Maps</li>
-        <li>Configuración de Google Business Profile y optimización de reseñas</li>
-        <li>Consultoría en arquitectura SEO de landing pages</li>
-        <li>Colaboración con agencias y departamentos internos de marketing</li>
+    {/* Card 2: Eva Recommends */}
+    <div className="bg-white rounded-xl shadow-md p-4 space-y-3">
+      <img src="/media/seo2.png" alt="Alquiler Turístico" className="w-full h-40 object-cover rounded-md" />
+      <h3 className="text-lg font-bold">Alquiler Turístico – Eva Recommends</h3>
+      <p className="text-sm">Campañas de captación para propietarios de viviendas turísticas.</p>
+      <ul className="list-disc text-sm pl-5">
+        <li>+350 leads cualificados</li>
+        <li>CTR: 5,2% – Conversión: 18%</li>
+        <li>Formulario conectado a WhatsApp</li>
+        <li>Audiencias lookalike + contextual</li>
       </ul>
+      <p className="text-xs italic">"Alta calidad de leads y feedback constante" – Eva</p>
     </div>
   </div>
 </SwiperSlide>
 
- 
+<SwiperSlide>
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 bg-white text-black p-6 rounded-lg">
+    {/* Card 3: Luis G. (Amovens) */}
+    <div className="bg-white rounded-xl shadow-md p-4 space-y-3">
+      <img src="/media/seo3.png" alt="Concienciación Amovens" className="w-full h-40 object-cover rounded-md" />
+      <h3 className="text-lg font-bold">Nuevos Servicios – Luis G. (Amovens)</h3>
+      <p className="text-sm">Campaña de awareness sobre los nuevos servicios de movilidad compartida.</p>
+      <ul className="list-disc text-sm pl-5">
+        <li>+200K impresiones en Meta Ads</li>
+        <li>Vídeos con tiempo medio de 21s</li>
+        <li>+37% tráfico web</li>
+        <li>Retargeting con comportamiento</li>
+      </ul>
+      <p className="text-xs italic">"Estrategia elegante y efectiva" – Luis G.</p>
+    </div>
+
+    {/* Card 4: Ignacio G. (Kampaoh) */}
+    <div className="bg-white rounded-xl shadow-md p-4 space-y-3">
+      <img src="/media/seo4.jpg" alt="Conversión Kampaoh" className="w-full h-40 object-cover rounded-md" />
+      <h3 className="text-lg font-bold">Conversión – Ignacio G. (Kampaoh)</h3>
+      <p className="text-sm">Generación de reservas para alojamientos turísticos glamping.</p>
+      <ul className="list-disc text-sm pl-5">
+        <li>+1MILLON impresiones en Meta Ads</li>
+         <li>Formulario conectado a WhatsApp</li>
+        <li>Audiencias lookalike + contextual</li>
+      </ul>
+      <p className="text-xs italic">"Alta calidad de leads y feedback constante" – Eva</p>
+    </div>
+  </div>
+</SwiperSlide>
+
+
+
 </Swiper>
+
 
         </div>
       )}
