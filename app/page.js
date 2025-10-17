@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Head from 'next/head';
 import Navbar from './components/navbar';
 import Hero from './components/hero';
 import Interview from './components/Interview';
@@ -17,6 +18,10 @@ export default function Home() {
 
   return (
     <>
+      <Head>
+        <title>Alberto Ledesma Ollega - FULL STACK DEVELOPER</title>
+        <meta name="description" content="Alberto Ledesma Ollega - FULL STACK DEVELOPER" />
+      </Head>
       <Navbar />
 
       <div id="hero">
