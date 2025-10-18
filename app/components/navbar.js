@@ -33,19 +33,33 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className={`w-full fixed top-0 left-0 z-50 flex items-center justify-end px-6 py-4 transition-colors duration-300 ${scrolled ? 'bg-gray-800/50 backdrop-blur-sm' : 'bg-transparent'}`}>
-        {/* Hamburger Menu Button */}
-        <button onClick={toggleMenu} className="z-50 text-white focus:outline-none">
-          <div className="w-6 h-6 flex flex-col justify-between items-center">
-            <span className={`block w-full h-0.5 bg-white transform transition duration-300 ease-in-out ${isMenuOpen ? 'rotate-45 translate-y-2.5' : ''}`}></span>
-            <span className={`block w-full h-0.5 bg-white transition duration-300 ease-in-out ${isMenuOpen ? 'opacity-0' : ''}`}></span>
-            <span className={`block w-full h-0.5 bg-white transform transition duration-300 ease-in-out ${isMenuOpen ? '-rotate-45 -translate-y-2.5' : ''}`}></span>
-          </div>
-        </button>
+      <nav className={`w-full fixed top-0 left-0 z-50 flex items-center justify-between px-6 py-4 transition-colors duration-300 ${scrolled ? 'bg-gray-800/50 backdrop-blur-sm' : 'bg-transparent'}`}>
+        <div className="hidden md:flex items-center gap-6">
+          {sections.map((section) => (
+            <ScrollLink
+              key={section.id}
+              to={section.id}
+              smooth={true}
+              duration={500}
+              className="cursor-pointer font-semibold text-white text-lg hover:text-blue-400 transition-colors"
+            >
+              {section.title}
+            </ScrollLink>
+          ))}
+        </div>
+        <div className="md:hidden">
+          <button onClick={toggleMenu} className="z-50 text-white focus:outline-none">
+            <div className="w-6 h-6 flex flex-col justify-between items-center">
+              <span className={`block w-full h-0.5 bg-white transform transition duration-300 ease-in-out ${isMenuOpen ? 'rotate-45 translate-y-2.5' : ''}`}></span>
+              <span className={`block w-full h-0.5 bg-white transition duration-300 ease-in-out ${isMenuOpen ? 'opacity-0' : ''}`}></span>
+              <span className={`block w-full h-0.5 bg-white transform transition duration-300 ease-in-out ${isMenuOpen ? '-rotate-45 -translate-y-2.5' : ''}`}></span>
+            </div>
+          </button>
+        </div>
       </nav>
 
       {/* Sidebar Menu */}
-      <div className={`fixed top-0 right-0 h-full bg-gray-900 bg-opacity-95 backdrop-blur-lg w-64 transform transition-transform duration-300 ease-in-out z-40 ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+      <div className={`fixed top-0 right-0 h-full bg-gray-900 bg-opacity-95 backdrop-blur-lg w-64 transform transition-transform duration-300 ease-in-out z-40 ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'} md:hidden`}>
         <div className="flex flex-col items-center justify-center h-full pt-20">
           {sections.map((section, index) => (
             <ScrollLink
@@ -65,7 +79,7 @@ const Navbar = () => {
 
       {/* Overlay for closing menu */}
       {isMenuOpen && (
-        <div onClick={toggleMenu} className="fixed inset-0 bg-black bg-opacity-50 z-30"></div>
+        <div onClick={toggleMenu} className="fixed inset-0 bg-black bg-opacity-50 z-30 md:hidden"></div>
       )}
     </>
   );

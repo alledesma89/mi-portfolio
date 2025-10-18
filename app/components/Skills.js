@@ -137,17 +137,17 @@ const skillsByCat = {
 };
 
 const CategorySection = ({ title, skills, onCardClick }) => (
-  <div className="mb-16">
-    <h3 className="text-3xl font-bold text-center mb-8 text-blue-400">{title}</h3>
-    <div className="flex flex-wrap justify-center gap-6">
+  <div className="mb-12 sm:mb-16">
+    <h3 className="text-2xl sm:text-3xl font-bold text-center mb-8 text-blue-400">{title}</h3>
+    <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
       {skills.map((skill) => {
         const isSpecial = skill.specialStyle;
         const cardClasses = isSpecial
-          ? 'group bg-white p-6 rounded-lg shadow-lg hover:shadow-blue-500/30 transform hover:-translate-y-2 transition-all duration-300 cursor-pointer border border-gray-200 flex flex-col w-full sm:w-5/12 lg:w-[30%]'
-          : 'group bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-blue-500/20 transform hover:-translate-y-2 transition-all duration-300 cursor-pointer border border-gray-700 hover:border-blue-500 flex flex-col w-full sm:w-5/12 lg:w-[30%]';
-        const titleClasses = isSpecial ? 'text-xl font-semibold text-gray-800' : 'text-xl font-semibold text-gray-200';
-        const experienceClasses = isSpecial ? 'text-md font-bold text-blue-600' : 'text-md font-bold text-blue-400';
-        const versionsClasses = isSpecial ? 'text-sm text-gray-500 mt-1' : 'text-sm text-gray-400 mt-1';
+          ? 'group bg-white p-4 sm:p-6 rounded-lg shadow-lg hover:shadow-blue-500/30 transform hover:-translate-y-2 transition-all duration-300 cursor-pointer border border-gray-200 flex flex-col w-full sm:w-[48%] lg:w-[30%]'
+          : 'group bg-gray-800 p-4 sm:p-6 rounded-lg shadow-lg hover:shadow-blue-500/20 transform hover:-translate-y-2 transition-all duration-300 cursor-pointer border border-gray-700 hover:border-blue-500 flex flex-col w-full sm:w-[48%] lg:w-[30%]';
+        const titleClasses = isSpecial ? 'text-lg sm:text-xl font-semibold text-gray-800' : 'text-lg sm:text-xl font-semibold text-gray-200';
+        const experienceClasses = isSpecial ? 'text-sm sm:text-md font-bold text-blue-600' : 'text-sm sm:text-md font-bold text-blue-400';
+        const versionsClasses = isSpecial ? 'text-xs sm:text-sm text-gray-500 mt-1' : 'text-xs sm:text-sm text-gray-400 mt-1';
         const borderClasses = isSpecial ? 'border-t border-gray-200' : 'border-t border-gray-700';
 
         return (
@@ -157,7 +157,7 @@ const CategorySection = ({ title, skills, onCardClick }) => (
             onClick={() => onCardClick(skill)}
           >
             <div className="flex-grow flex flex-col items-center text-center">
-              <Image src={skill.logo} alt={`${skill.name} logo`} width={64} height={64} className={`h-16 w-16 mb-4 object-contain ${!isSpecial && 'filter grayscale group-hover:grayscale-0'} transition-all duration-300`} />
+              <Image src={skill.logo} alt={`${skill.name} logo`} width={56} height={56} className={`h-14 w-14 mb-4 object-contain ${!isSpecial && 'filter grayscale group-hover:grayscale-0'} transition-all duration-300`} />
               <h3 className={titleClasses}>{skill.name}</h3>
             </div>
             <div className={`mt-4 pt-4 ${borderClasses} text-center`}>
@@ -196,9 +196,9 @@ const Skills = () => {
   }, []);
 
   return (
-    <section className="py-20 bg-gray-900" id="skills">
+    <section className="py-16 sm:py-20 bg-gray-900" id="skills">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-16 text-white">Habilidades y Tecnologías</h2>
+        <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 sm:mb-16 text-white">Habilidades y Tecnologías</h2>
         
         <CategorySection title="Frontend" skills={skillsByCat.frontend} onCardClick={openModal} />
         <CategorySection title="Backend" skills={skillsByCat.backend} onCardClick={openModal} />
@@ -212,21 +212,21 @@ const Skills = () => {
           onClick={closeModal}
         >
           <div 
-            className={`bg-gray-800 rounded-lg shadow-2xl max-w-2xl w-full mx-auto p-8 relative transition-transform duration-300 ${isModalOpen ? 'scale-100' : 'scale-95'}`}
+            className={`bg-gray-800 rounded-lg shadow-2xl max-w-lg w-full mx-auto p-6 sm:p-8 relative transition-transform duration-300 ${isModalOpen ? 'scale-100' : 'scale-95'}`}
             onClick={(e) => e.stopPropagation()}
           >
             <button onClick={closeModal} className="absolute top-4 right-4 text-gray-500 hover:text-white transition-colors z-10">
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path></svg>
             </button>
             <div className="flex items-center mb-6">
-              <Image src={selectedSkill.logo} alt={`${selectedSkill.name} logo`} width={48} height={48} className="h-12 w-12 mr-4 object-contain" />
-              <h3 className="text-3xl font-bold text-white">{selectedSkill.name}</h3>
+              <Image src={selectedSkill.logo} alt={`${selectedSkill.name} logo`} width={40} height={40} className="h-10 w-10 mr-4 object-contain" />
+              <h3 className="text-2xl sm:text-3xl font-bold text-white">{selectedSkill.name}</h3>
             </div>
-            <div className="space-y-5">
+            <div className="space-y-4 sm:space-y-5">
               {selectedSkill.examples.map((example, index) => (
                 <div key={index} className="border-l-4 border-blue-500 pl-4">
-                  <h4 className="font-bold text-lg text-gray-200">{example.title}</h4>
-                  <p className="text-gray-400">{example.description}</p>
+                  <h4 className="font-bold text-base sm:text-lg text-gray-200">{example.title}</h4>
+                  <p className="text-sm sm:text-base text-gray-400">{example.description}</p>
                 </div>
               ))}
             </div>

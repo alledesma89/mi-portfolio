@@ -55,12 +55,12 @@ const SobreMi = () => {
   const closeModal = () => setIsModalOpen(false);
 
   return (
-    <section className="py-20 bg-white text-gray-800" id="sobremi">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row items-center gap-12">
+    <section className="py-16 sm:py-20 bg-white text-gray-800" id="sobremi">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
           {/* Columna de Imagen */}
           <div className="w-full md:w-1/3">
-            <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-2xl">
+            <div className="relative h-[350px] sm:h-[400px] rounded-2xl overflow-hidden shadow-2xl">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={fotoActual}
@@ -92,15 +92,15 @@ const SobreMi = () => {
           </div>
 
           {/* Columna de Texto */}
-          <div className="w-full md:w-2/3">
-            <h2 className="text-4xl font-bold mb-4 text-blue-800">Sobre mí</h2>
-            <p className="text-lg mb-6 leading-relaxed">
+          <div className="w-full md:w-2/3 text-center md:text-left">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-blue-800">Sobre mí</h2>
+            <p className="text-base sm:text-lg mb-6 leading-relaxed">
                 ¡Hola! Soy <strong>Alberto Ledesma</strong>, un desarrollador Full-Stack con más de 12 años de experiencia construyendo soluciones digitales robustas. Mi carrera se ha centrado en dominar tanto el frontend, con tecnologías como <strong>React, Next.js y Angular</strong>, como el backend, desarrollando APIs con <strong>Node.js</strong> y gestionando infraestructuras en la nube con <strong>GCloud y AWS</strong>. Mi formación inicial en Informática me aporta una perspectiva única, permitiéndome no solo escribir código limpio y escalable, sino también entender y construir productos que responden a objetivos de negocio concretos. Me apasiona liderar equipos técnicos y transformar ideas complejas en aplicaciones funcionales y de alto rendimiento.
             </p>
-            <div className="flex items-center gap-6 mt-8">
+            <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-6 mt-8">
                 <button 
                     onClick={openModal}
-                    className="bg-blue-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center gap-2"
+                    className="bg-blue-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center gap-2 w-full sm:w-auto justify-center"
                 >
                     <FaGraduationCap /> Ver mi Formación
                 </button>
@@ -132,21 +132,21 @@ const SobreMi = () => {
               animate={{ y: 0, opacity: 1 }}
               exit={{ y: -50, opacity: 0 }}
               transition={{ type: "spring", stiffness: 300, damping: 30 }}
-              className="bg-white rounded-lg shadow-2xl max-w-2xl w-full mx-auto p-8 relative"
+              className="bg-white rounded-lg shadow-2xl max-w-lg w-full mx-auto p-6 sm:p-8 relative"
               onClick={(e) => e.stopPropagation()}
             >
               <button onClick={closeModal} className="absolute top-4 right-4 text-gray-500 hover:text-gray-800 transition-colors">
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path></svg>
               </button>
-              <h3 className="text-3xl font-bold text-blue-800 mb-6">Historial Académico</h3>
+              <h3 className="text-2xl sm:text-3xl font-bold text-blue-800 mb-6">Historial Académico</h3>
               <div className="space-y-6">
                 {formacion.map((item, i) => (
                   <div key={i} className="flex items-start gap-4">
-                    <div className="bg-blue-100 p-3 rounded-full">{item.icono}</div>
+                    <div className="bg-blue-100 p-3 rounded-full hidden sm:block">{item.icono}</div>
                     <div>
-                      <p className="font-bold text-lg text-gray-800">{item.titulo}</p>
-                      <p className="text-md text-gray-600 font-semibold">{item.lugar} ({item.añoInicio} - {item.añoFin})</p>
-                      <p className="text-sm text-gray-700 mt-1">{item.detalle}</p>
+                      <p className="font-bold text-base sm:text-lg text-gray-800">{item.titulo}</p>
+                      <p className="text-sm sm:text-md text-gray-600 font-semibold">{item.lugar} ({item.añoInicio} - {item.añoFin})</p>
+                      <p className="text-xs sm:text-sm text-gray-700 mt-1">{item.detalle}</p>
                     </div>
                   </div>
                 ))}

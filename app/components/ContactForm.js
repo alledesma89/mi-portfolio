@@ -100,10 +100,10 @@ const ContactForm = () => {
   };
 
   return (
-    <section className="py-20 bg-gray-900 text-white">
-      <div className="max-w-4xl mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-6 text-blue-400 text-center">Contacto</h2>
-        <form onSubmit={handleSubmit} className="space-y-6 bg-gray-800 p-8 rounded-xl shadow-lg">
+    <section className="py-16 sm:py-20 bg-gray-900 text-white" id="contacto">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6">
+        <h2 className="text-3xl sm:text-4xl font-bold mb-8 text-blue-400 text-center">Contacto</h2>
+        <form onSubmit={handleSubmit} className="space-y-6 bg-gray-800 p-6 sm:p-8 rounded-xl shadow-lg">
           <div className="flex flex-col md:flex-row gap-6">
             <div className="flex flex-col gap-5 flex-1">
               <div>
@@ -114,7 +114,7 @@ const ContactForm = () => {
                   name="nombre"
                   value={formData.nombre}
                   onChange={handleChange}
-                  className="w-full bg-gray-700 border border-gray-600 rounded-md p-2 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full bg-gray-700 border border-gray-600 rounded-md p-2.5 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
                   placeholder="Tu nombre completo"
                   required
                 />
@@ -129,7 +129,7 @@ const ContactForm = () => {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full bg-gray-700 border border-gray-600 rounded-md p-2 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full bg-gray-700 border border-gray-600 rounded-md p-2.5 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
                   placeholder="tu@email.com"
                   required
                 />
@@ -144,7 +144,7 @@ const ContactForm = () => {
                   name="telefono"
                   value={formData.telefono}
                   onChange={handleChange}
-                  className="w-full bg-gray-700 border border-gray-600 rounded-md p-2 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full bg-gray-700 border border-gray-600 rounded-md p-2.5 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
                   placeholder="+34 600 123 456"
                   required
                 />
@@ -154,13 +154,13 @@ const ContactForm = () => {
 
             <div className="flex flex-col flex-1">
               <label className="text-sm font-semibold text-gray-300 mb-2">Consulta sobre</label>
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-wrap gap-2 sm:gap-3">
                 {opciones.map((opcion) => (
                   <button
                     key={opcion}
                     type="button"
                     onClick={() => handleAsuntoClick(opcion)}
-                    className={`px-4 py-2 rounded-md border transition whitespace-nowrap ${
+                    className={`px-3 py-2 text-sm sm:px-4 sm:py-2 rounded-md border transition whitespace-nowrap ${
                       formData.asunto === opcion
                         ? "bg-blue-600 text-white border-blue-600"
                         : "bg-gray-700 text-gray-200 border-gray-600 hover:bg-gray-600"
@@ -179,7 +179,7 @@ const ContactForm = () => {
                     name="otroAsunto"
                     value={formData.otroAsunto}
                     onChange={handleChange}
-                    className="w-full bg-gray-700 border border-gray-600 rounded-md p-2 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full bg-gray-700 border border-gray-600 rounded-md p-2.5 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
                     placeholder="Describe brevemente tu consulta"
                   />
                 </div>
@@ -204,16 +204,16 @@ const ContactForm = () => {
           )}
         </form>
 
-        <section className="mt-12 border-t border-gray-700 pt-8 text-gray-300 max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-center gap-8 text-lg font-semibold">
+        <section className="mt-12 border-t border-gray-700 pt-8 text-gray-300 max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-8 text-base sm:text-lg font-semibold">
           <div className="flex items-center gap-3">
             <FaWhatsapp className="text-green-400 text-2xl" />
-            <a href="https://wa.me/34622281415" target="_blank" rel="noopener noreferrer" className="text-blue-400 underline">
+            <a href="https://wa.me/34622281415" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">
               622 281 415
             </a>
           </div>
           <div className="flex items-center gap-3">
             <FaEnvelope className="text-red-400 text-2xl" />
-            <a href="mailto:ctdigitalsolutions20@gmail.com" className="text-blue-400 underline">
+            <a href="mailto:ctdigitalsolutions20@gmail.com" className="text-blue-400 hover:underline">
               ctdigitalsolutions20@gmail.com
             </a>
           </div>

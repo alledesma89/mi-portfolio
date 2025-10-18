@@ -57,30 +57,30 @@ const ExperienceItem = ({ job, index }) => (
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 0.5 }}
-        className="mb-8 flex justify-between items-center w-full"
+        className="mb-8 flex justify-between items-center w-full md:odd:flex-row-reverse"
     >
-        <div className={`w-5/12 ${index % 2 === 0 ? 'order-1' : 'order-3'}`}>
-            <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-200 hover:shadow-xl transition-shadow duration-300 flex flex-col h-full">
+        <div className="w-full md:w-5/12">
+            <div className="bg-white p-4 sm:p-6 rounded-lg shadow-lg border border-gray-200 hover:shadow-xl transition-shadow duration-300 flex flex-col h-full">
                 <div className="flex-grow">
-                    <p className="text-sm font-semibold text-blue-600">{job.dates}</p>
-                    <h3 className="text-xl font-bold mt-1 text-gray-900">{job.title}</h3>
-                    <p className="text-md italic text-gray-500 mt-1">{job.company}</p>
-                    <p className="mt-4 text-gray-600 text-sm">{job.description}</p>
-                    <div className="mt-4 flex flex-wrap gap-2">
+                    <p className="text-xs sm:text-sm font-semibold text-blue-600">{job.dates}</p>
+                    <h3 className="text-lg sm:text-xl font-bold mt-1 text-gray-900">{job.title}</h3>
+                    <p className="text-sm sm:text-md italic text-gray-500 mt-1">{job.company}</p>
+                    <p className="mt-3 sm:mt-4 text-gray-600 text-xs sm:text-sm">{job.description}</p>
+                    <div className="mt-3 sm:mt-4 flex flex-wrap gap-1 sm:gap-2">
                         {job.tech.map((tech, i) => (
-                            <span key={i} className="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-1 rounded-full">
+                            <span key={i} className="bg-blue-100 text-blue-800 text-[10px] sm:text-xs font-semibold px-2 py-1 rounded-full">
                                 {tech}
                             </span>
                         ))}
                     </div>
                 </div>
                 {job.link && (
-                    <div className="mt-6">
+                    <div className="mt-4 sm:mt-6">
                         <a
                             href={job.link}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2 bg-blue-600 text-white font-semibold px-4 py-2 rounded-md hover:bg-blue-700 transition-colors duration-300 transform hover:scale-105"
+                            className="inline-flex items-center gap-2 bg-blue-600 text-white font-semibold px-3 py-1.5 sm:px-4 sm:py-2 rounded-md hover:bg-blue-700 transition-colors duration-300 transform hover:scale-105 text-xs sm:text-sm"
                         >
                             Visitar Proyecto <FaExternalLinkAlt />
                         </a>
@@ -88,12 +88,12 @@ const ExperienceItem = ({ job, index }) => (
                 )}
             </div>
         </div>
-        <div className="w-2/12 flex justify-center order-2 z-10">
+        <div className="hidden md:flex w-2/12 justify-center order-2 z-10">
             <div className="bg-blue-500 rounded-full h-8 w-8 flex items-center justify-center shadow-lg">
                 <FaBriefcase className="text-white" />
             </div>
         </div>
-        <div className={`w-5/12 ${index % 2 === 0 ? 'order-3' : 'order-1'}`}></div>
+        <div className="hidden md:block w-5/12 order-1 md:odd:order-3"></div>
     </motion.div>
 );
 
@@ -102,14 +102,21 @@ const ExperienceTimeline = () => {
   const visibleExperiences = showAll ? experienceData : experienceData.slice(0, 3);
 
   return (
-    <section id="experiencia" className="bg-white text-gray-800 py-20 px-4 sm:px-6 lg:px-8">
+    <section id="experiencia" className="bg-gray-50 text-gray-800 py-16 sm:py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-5xl mx-auto">
-        <h2 className="text-4xl font-bold text-center mb-16">Trayectoria Profesional</h2>
+        <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 sm:mb-16">Trayectoria Profesional</h2>
         <div className="relative">
-          <div className="absolute left-1/2 -translate-x-1/2 h-full w-0.5 bg-gray-200" aria-hidden="true"></div>
+          <div className="absolute left-4 md:left-1/2 -translate-x-1/2 h-full w-0.5 bg-gray-300" aria-hidden="true"></div>
           <AnimatePresence>
             {visibleExperiences.map((job, index) => (
-                <ExperienceItem key={job.company + job.title} job={job} index={index} />
+                <div key={job.company + job.title} className="pl-10 md:pl-0 relative">
+                     <div className="md:hidden absolute top-1/2 -translate-y-1/2 left-4 -translate-x-1/2 z-10">
+                        <div className="bg-blue-500 rounded-full h-6 w-6 flex items-center justify-center shadow-lg">
+                            <FaBriefcase className="text-white text-xs" />
+                        </div>
+                    </div>
+                    <ExperienceItem job={job} index={index} />
+                </div>
             ))}
           </AnimatePresence>
         </div>
