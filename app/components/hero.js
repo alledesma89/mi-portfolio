@@ -10,7 +10,7 @@ import 'swiper/css/pagination';
 
 const technologies = [
     { name: 'React', logo: '/media/react.svg', size: 110, position: { top: '15%', left: '10%' } },
-    { name: 'Next.js', logo: '/media/Next-JS.png', size: 90, position: { top: '20%', left: '80%' } },
+    { name: 'Next.js', logo: '/media/nextjs.png', size: 90, position: { top: '20%', left: '80%' } },
     { name: 'Angular', logo: '/media/angular.png', size: 100, position: { top: '70%', left: '15%' } },
     { name: 'Node.js', logo: '/media/nodejs.svg', size: 120, position: { top: '65%', left: '85%' } },
     { name: 'JavaScript', logo: '/media/javascript.svg', size: 80, position: { top: '50%', left: '50%' } },
