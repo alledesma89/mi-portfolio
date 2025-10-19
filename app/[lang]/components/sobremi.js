@@ -11,6 +11,7 @@ import {
   FaGraduationCap,
 } from "react-icons/fa";
 import Image from "next/image";
+import { useDictionary } from "./DictionaryProvider";
 
 const fotos = [
   "/media/foto1.jpg",
@@ -19,28 +20,8 @@ const fotos = [
   "/media/foto4.jpg",
 ];
 
-const formacion = [
-  {
-    añoInicio: 2008,
-    añoFin: 2010,
-    titulo: "Grado Superior en Desarrollo de Aplicaciones Multiplataforma (DAM)",
-    lugar: "IES Nervión (Sevilla)",
-    icono: <FaUniversity className="text-blue-500 text-3xl" />,
-    detalle:
-      "Formación oficial centrada en el desarrollo de software, con una base sólida en lenguajes como Java y C#, patrones de diseño, y gestión de bases de datos. Este fue el punto de partida técnico de mi carrera.",
-  },
-  {
-    añoInicio: 2016,
-    añoFin: 2018,
-    titulo: "Máster en Programación Web Full Stack",
-    lugar: "MasterD",
-    icono: <FaCode className="text-green-500 text-3xl" />,
-    detalle:
-      "Formación intensiva en desarrollo web frontend y backend. Aprendí tecnologías como HTML5, CSS3, JavaScript, Node.js, React y bases de datos relacionales.",
-  },
-];
-
 const SobreMi = () => {
+  const dictionary = useDictionary();
   const [fotoActual, setFotoActual] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -53,6 +34,8 @@ const SobreMi = () => {
 
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
+
+  const formacion = dictionary.about.education;
 
   return (
     <section className="py-16 sm:py-20 bg-white text-gray-800" id="sobremi">
@@ -93,22 +76,38 @@ const SobreMi = () => {
 
           {/* Columna de Texto */}
           <div className="w-full md:w-2/3 text-center md:text-left">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-blue-800">Sobre mí</h2>
-            <p className="text-base sm:text-lg mb-6 leading-relaxed">
-                ¡Hola! Soy <strong>Alberto Ledesma</strong>, un desarrollador Full-Stack con más de 12 años de experiencia construyendo soluciones digitales robustas. Mi carrera se ha centrado en dominar tanto el frontend, con tecnologías como <strong>React, Next.js y Angular</strong>, como el backend, desarrollando APIs con <strong>Node.js</strong> y gestionando infraestructuras en la nube con <strong>GCloud y AWS</strong>. Mi formación inicial en Informática me aporta una perspectiva única, permitiéndome no solo escribir código limpio y escalable, sino también entender y construir productos que responden a objetivos de negocio concretos. Me apasiona liderar equipos técnicos y transformar ideas complejas en aplicaciones funcionales y de alto rendimiento.
-            </p>
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-blue-800">{dictionary.about.title}</h2>
+            <p className="text-base sm:text-lg mb-6 leading-relaxed" dangerouslySetInnerHTML={{ __html: dictionary.about.description }} />
             <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-6 mt-8">
                 <button 
                     onClick={openModal}
                     className="bg-blue-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center gap-2 w-full sm:w-auto justify-center"
                 >
-                    <FaGraduationCap /> Ver mi Formación
+                    <FaGraduationCap /> {dictionary.about.view_education}
                 </button>
                 <div className="flex space-x-4">
-                    <a href="https://www.linkedin.com/in/alberto-ledesma-ollega-6727a651/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+                    <a
+                      href="https://www.linkedin.com/in/alberto-ledesma-ollega-6727a651/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="LinkedIn"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        window.open('https://www.linkedin.com/in/alberto-ledesma-ollega-6727a651/', '_blank', 'noopener');
+                      }}
+                    >
                         <FaLinkedin className="text-blue-700 text-4xl hover:scale-110 transition-transform" />
                     </a>
-                    <a href="https://github.com/alledesma89/" target="_blank" rel="noreferrer" aria-label="GitHub">
+                    <a
+                      href="https://github.com/alledesma89/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="GitHub"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        window.open('https://github.com/alledesma89/', '_blank', 'noopener');
+                      }}
+                    >
                         <FaGithub className="text-gray-800 text-4xl hover:scale-110 transition-transform" />
                     </a>
                 </div>
@@ -138,15 +137,17 @@ const SobreMi = () => {
               <button onClick={closeModal} className="absolute top-4 right-4 text-gray-500 hover:text-gray-800 transition-colors">
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path></svg>
               </button>
-              <h3 className="text-2xl sm:text-3xl font-bold text-blue-800 mb-6">Historial Académico</h3>
+              <h3 className="text-2xl sm:text-3xl font-bold text-blue-800 mb-6">{dictionary.about.education_history}</h3>
               <div className="space-y-6">
                 {formacion.map((item, i) => (
                   <div key={i} className="flex items-start gap-4">
-                    <div className="bg-blue-100 p-3 rounded-full hidden sm:block">{item.icono}</div>
+                    <div className="bg-blue-100 p-3 rounded-full hidden sm:block">
+                        {i === 0 ? <FaUniversity className="text-blue-500 text-3xl" /> : <FaCode className="text-green-500 text-3xl" />}
+                    </div>
                     <div>
-                      <p className="font-bold text-base sm:text-lg text-gray-800">{item.titulo}</p>
-                      <p className="text-sm sm:text-md text-gray-600 font-semibold">{item.lugar} ({item.añoInicio} - {item.añoFin})</p>
-                      <p className="text-xs sm:text-sm text-gray-700 mt-1">{item.detalle}</p>
+                      <p className="font-bold text-base sm:text-lg text-gray-800">{item.title}</p>
+                      <p className="text-sm sm:text-md text-gray-600 font-semibold">{item.place}</p>
+                      <p className="text-xs sm:text-sm text-gray-700 mt-1">{item.detail}</p>
                     </div>
                   </div>
                 ))}

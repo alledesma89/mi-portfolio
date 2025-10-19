@@ -1,8 +1,9 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import Image from 'next/image';
+import Logo from './Logo';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useDictionary } from './DictionaryProvider';
 
 const interviewData = {
   "Experiencia y Rol": [
@@ -105,6 +106,8 @@ const interviewData = {
 
 const Interview = ({ onClose }) => {
   const [selectedQuestion, setSelectedQuestion] = useState(null);
+  const dictionary = useDictionary() || {};
+  const interviewContent = dictionary.interview || interviewData;
 
   useEffect(() => {
     const handleEsc = (event) => {
@@ -136,9 +139,9 @@ const Interview = ({ onClose }) => {
 
         {/* Columna de Preguntas */}
         <div className="w-full lg:w-2/5 bg-white p-6 rounded-lg shadow-inner">
-          <h3 className="font-bold text-xl mb-4 text-gray-700">Preguntas:</h3>
+          <h3 className="font-bold text-xl mb-4 text-gray-700">{dictionary?.interview_title || 'Preguntas:'}</h3>
           <div className="flex flex-col gap-4 max-h-[450px] overflow-y-auto pr-2">
-            {Object.entries(interviewData).map(([category, questions]) => (
+            {Object.entries(interviewContent).map(([category, questions]) => (
               <div key={category}>
                 <h4 className="font-bold text-md mb-2 text-blue-600 border-b-2 border-blue-200 pb-1">{category}</h4>
                 <div className="flex flex-col gap-3 mt-3">
@@ -158,7 +161,7 @@ const Interview = ({ onClose }) => {
 
         {/* Columna de Respuesta (Chat) */}
         <div className="w-full lg:w-3/5 flex flex-col gap-4 mt-8 lg:mt-0">
-            <h2 className="text-2xl font-bold text-center text-gray-800">Simulador de Entrevista</h2>
+            <h2 className="text-2xl font-bold text-center text-gray-800">{dictionary?.interview_header || 'Simulador de Entrevista'}</h2>
             <AnimatePresence mode="wait">
               <motion.div
                 key={selectedQuestion ? selectedQuestion.question : 'initial'}
@@ -168,15 +171,16 @@ const Interview = ({ onClose }) => {
                 transition={{ duration: 0.4 }}
                 className="flex items-start gap-4 h-full"
               >
-                <Image 
-                  src="/media/avatarong.png" 
-                  alt="Avatar" 
-                  width={60} 
-                  height={60} 
-                  className="rounded-full border-2 border-blue-500 mt-1 shadow-md flex-shrink-0"
+                <Logo
+                  src="/media/avatarong.png"
+                  alt="Avatar"
+                  size={60}
+                  className="mt-1 shadow-md flex-shrink-0"
+                  frame={false}
+                  circle={true}
                 />
                 <div className="bg-blue-500 text-white p-4 rounded-xl rounded-tl-none shadow-lg w-full h-full flex items-center">
-                  <p>{selectedQuestion ? selectedQuestion.answer : '¡Hola! Soy el asistente virtual de Alberto. Selecciona una pregunta para empezar la entrevista.'}</p>
+                  <p>{selectedQuestion ? selectedQuestion.answer : (dictionary?.interview_intro || '¡Hola! Soy el asistente virtual de Alberto. Selecciona una pregunta para empezar la entrevista.')}</p>
                 </div>
               </motion.div>
             </AnimatePresence>
