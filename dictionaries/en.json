@@ -1,0 +1,357 @@
+{
+  "navbar": {
+    "home": "Home",
+    "about": "About Me",
+    "experience": "Experience",
+    "skills": "Skills",
+    "contact": "Contact",
+    "download_cv": "Download CV"
+  },
+  "hero": {
+    "video_not_supported": "Your browser does not support the video tag.",
+    "name": "Alberto Ledesma",
+    "title": "Full-Stack Developer",
+    "interview_button": "Interview Me"
+  },
+  "about": {
+    "title": "About Me",
+    "description": "Hello! I'm <strong>Alberto Ledesma</strong>, a Full-Stack developer with over 12 years of experience building robust digital solutions. My career has focused on mastering both the frontend, with technologies like <strong>React, Next.js, and Angular</strong>, and the backend, developing APIs with <strong>Node.js</strong> and managing cloud infrastructures with <strong>GCloud and AWS</strong>. My initial training in Computer Science gives me a unique perspective, allowing me not only to write clean and scalable code, but also to understand and build products that respond to concrete business objectives. I am passionate about leading technical teams and transforming complex ideas into functional, high-performance applications.",
+    "view_education": "View my Education",
+    "education_history": "Academic History",
+    "education": [
+      {
+        "title": "Higher Degree in Multi-platform Application Development (DAM)",
+        "place": "IES Nervión (Seville)",
+        "detail": "Official training focused on software development, with a solid foundation in languages such as Java and C#, design patterns, and database management. This was the technical starting point of my career.",
+        "year": "2008 - 2010"
+      },
+      {
+        "title": "Master in Full Stack Web Programming",
+        "place": "MasterD",
+        "detail": "Intensive training in frontend and backend web development. I learned technologies like HTML5, CSS3, JavaScript, Node.js, React and relational databases.",
+        "year": "2011"
+      }
+    ]
+  },
+  "experience": {
+    "title": "Professional Career",
+    "show_all": "Show full trajectory",
+    "visit_project": "Visit Project",
+    "data": [
+      {
+        "title": "Front-end Developer & Technical Lead",
+        "company": "GFT (Avatar IA Project with HeyGen)",
+        "dates": "Jul. 2025 - Present",
+        "location": "Spain · Remote",
+        "description": "Led the development of an innovative AI avatar project from its inception, utilizing React and Next.js to build a dynamic and responsive user interface from complex Figma designs. I was responsible for the comprehensive technical control of the project, including architecture, technology selection, and managing a development team, ensuring the delivery of high-quality and high-performance solutions.",
+        "tech": ["React", "Next.js", "ReactNative", "Figma", "Technical Leadership"]
+      },
+      {
+        "title": "React Developer",
+        "company": "AMOVENS",
+        "dates": "Jan. 2023 - Jul. 2025",
+        "location": "Spain · Remote",
+        "description": "As a React developer, I focused on the continuous improvement of AMOVENS' main application. This included the creation of reusable and optimized frontend components, as well as the identification and resolution of complex errors (debugging) to ensure a fluid and stable user experience. I actively contributed to optimizing the platform's performance and usability.",
+        "tech": ["React", "ReactNative", "Debugging", "UX"]
+      },
+      {
+        "title": "Full Stack Technical Manager",
+        "company": "Erescambio Marketing",
+        "dates": "Oct. 2021 - Jul. 2025",
+        "location": "Spain · Remote",
+        "description": "I led a team of 2 developers in the creation of a web application with React, which was integrated with a WordPress backend configured as a Headless CMS. My role encompassed technical planning and team management, as well as the implementation of key functionalities that allowed clients to efficiently self-manage their content, significantly improving their autonomy and the scalability of their platforms.",
+        "tech": ["React", "WordPress", "Headless CMS", "Team Management"]
+      },
+      {
+        "title": "Technical Manager & Angular Developer",
+        "company": "JUBILAME",
+        "dates": "May. 2020 - Jan. 2024",
+        "location": "Spain · Remote",
+        "description": "I served as Technical Lead and Angular Developer, leading a team of 5 professionals. My responsibilities included comprehensive project management using Jira, configuring and optimizing development and production environments with Docker, implementing robust testing strategies, and administering the application's infrastructure in Google Cloud (GCloud), ensuring system stability and performance.",
+        "tech": ["Angular", "Jira", "Docker", "Google Cloud", "Team Leadership"]
+      },
+      {
+        "title": "Full-Stack Freelance Developer",
+        "company": "Freelance",
+        "dates": "Jan. 2016 - Present",
+        "location": "Spain · Remote",
+        "description": "As a Full-Stack Freelance Developer, I have designed and delivered customized web solutions for a diverse portfolio of clients. My work has ranged from creating e-commerce platforms with secure payment gateway integration to developing interactive web applications and advanced customization of CMS like WordPress through custom plugins, always seeking maximum efficiency and adaptability to client needs.",
+        "tech": ["Freelance", "E-commerce", "Payment Gateways", "WordPress", "Plugins"]
+      }
+    ]
+  },
+    "skills": {
+    "title": "Skills and Technologies",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "data_analytics": "Data Analytics",
+    "skillsByCat": {
+      "frontend": [
+        {
+          "name": "React",
+          "logo": "/media/react.svg",
+          "experience": "5+ years",
+          "versions": "16-18",
+          "examples": [
+            { "title": "Component Libraries", "description": "Built reusable component libraries and design systems using Storybook and atomic design." },
+            { "title": "Performance", "description": "Optimized rendering with memoization, code-splitting and lazy loading." }
+          ]
+        },
+        {
+          "name": "Next.js",
+          "logo": "/media/nextjs.png",
+          "experience": "4+ years",
+          "versions": "10-14",
+          "examples": [
+            { "title": "SSR/SSG", "description": "Implemented server-side rendering and static generation for SEO-critical pages." },
+            { "title": "API Routes", "description": "Created lightweight APIs for form handling and integrations." }
+          ]
+        },
+        {
+          "name": "React Native",
+          "logo": "/media/reactnative.svg",
+          "experience": "2 years",
+          "versions": "0.60+",
+          "examples": [
+            { "title": "Mobile App Development", "description": "Development of cross-platform mobile applications for iOS and Android." },
+            { "title": "API Integration", "description": "Integration of RESTful APIs for communication with backend services." }
+          ]
+        },
+        {
+          "name": "Angular",
+          "logo": "/media/angular.png",
+          "experience": "4+ years",
+          "versions": "8-14",
+          "examples": [
+            { "title": "Enterprise Apps", "description": "Led development of modular enterprise apps with NgRx and lazy-loaded modules." }
+          ]
+        },
+        {
+          "name": "JavaScript",
+          "logo": "/media/javascript.svg",
+          "experience": "12+ years",
+          "versions": "ES5+",
+          "examples": [
+            { "title": "Vanilla JS", "description": "Core language expertise applied to many projects and performance tuning." }
+          ]
+        },
+        {
+          "name": "Tailwind CSS",
+          "logo": "/media/tailwind.svg",
+          "experience": "4+ years",
+          "versions": "v1+",
+          "examples": [
+            { "title": "Design Systems", "description": "Built fast, responsive UIs using utility-first approach and custom theming." }
+          ]
+        }
+      ],
+      "backend": [
+        {
+          "name": "Node.js",
+          "logo": "/media/nodejs.svg",
+          "experience": "6+ years",
+          "versions": "10-20",
+          "examples": [
+            { "title": "APIs", "description": "Designed and implemented RESTful APIs with Express and frameworks like NestJS." }
+          ]
+        },
+        {
+          "name": "Docker",
+          "logo": "/media/docker.svg",
+          "experience": "5+ years",
+          "versions": "19+",
+          "examples": [
+            { "title": "Containers", "description": "Containerized applications and composed multi-service environments with docker-compose." }
+          ]
+        },
+        {
+          "name": "PostgreSQL",
+          "logo": "/media/postgres.svg",
+          "experience": "6+ years",
+          "versions": "9+",
+          "examples": [
+            { "title": "Databases", "description": "Designed relational schemas, optimized queries and indexing strategies." }
+          ]
+        },
+        {
+          "name": "Google Cloud",
+          "logo": "/media/google-cloud.jpg",
+          "experience": "4+ years",
+          "versions": "GCP",
+          "examples": [
+            { "title": "Cloud Services", "description": "Deployed services on Cloud Run and managed storage with Cloud Storage and BigQuery." }
+          ]
+        },
+        {
+          "name": "AWS",
+          "logo": "/media/aws.png",
+          "experience": "3+ years",
+          "versions": "AWS",
+          "examples": [
+            { "title": "Infrastructure", "description": "Worked with S3, EC2 and Lambda for serverless workloads and storage." }
+          ]
+        }
+      ],
+      "data": [
+        {
+          "name": "HeyGen",
+          "logo": "/media/heygen.svg",
+          "experience": "1+ year",
+          "versions": "latest",
+          "examples": [
+            { "title": "AI Avatars", "description": "Worked with HeyGen for avatar generation and AI-driven video content for the GFT project." }
+          ]
+        },
+        {
+          "name": "PIPECAT",
+          "logo": "/media/pipecat.png",
+          "experience": "1 year",
+          "versions": "n/a",
+          "examples": [
+            { "title": "Data Tooling", "description": "Experience using PIPECAT tools for data processing and analytics pipelines." }
+          ]
+        }
+      ]
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "button_whatsapp": "WhatsApp",
+    "button_call": "Call",
+    "button_email": "Email",
+    "button_linkedin": "LinkedIn",
+    "button_github": "GitHub",
+    "name": "Name",
+    "name_placeholder": "Your full name",
+    "name_required": "Name is required.",
+    "email": "Email",
+    "email_placeholder": "you@email.com",
+    "email_required": "Email is required.",
+    "email_invalid": "The email format is not valid.",
+    "phone": "Phone",
+    "phone_placeholder": "+34 600 123 456",
+    "phone_required": "Phone is required.",
+    "phone_invalid": "The phone format is not valid.",
+    "subject": "Inquiry about",
+    "options": [
+      "Web Design",
+      "SEO Positioning",
+      "Social Media Management",
+      "Programming Tasks (Full Stack Support)",
+      "Others"
+    ],
+    "other_subject": "Describe subject",
+    "other_subject_placeholder": "Briefly describe your inquiry",
+    "submit": "Send Inquiry",
+    "submitting": "Sending...",
+    "success_message": "Thank you for your message. I will contact you soon.",
+    "error_message": "There was a problem sending your message. Try again later.",
+    "whatsapp": "622 281 415",
+    "email_address": "ctdigitalsolutions20@gmail.com"
+  }
+  ,
+  "contact_override": {
+    "email_address": "ledesma89alberto@gmail.com"
+  }
+  ,
+  "interview": {
+    "Experience and Role": [
+      {
+        "question": "Can you describe your role as Technical Lead at JUBILAME?",
+        "answer": "Sure. At JUBILAME my main role was leading a team of 5 developers. Beyond coding with Angular, I handled system architecture, task and sprint management with Jira, and setup of infrastructure on Google Cloud. I also implemented development environments with Docker and supervised testing processes to ensure product quality."
+      },
+      {
+        "question": "What did you contribute to the Erescambio Marketing project?",
+        "answer": "As Technical Lead, I led a small team to create an innovative solution. We developed a React application connected to WordPress as a headless CMS, enabling non-technical clients to manage content intuitively and independently."
+      },
+      {
+        "question": "What was your main contribution at AMOVENS?",
+        "answer": "At AMOVENS I focused on the frontend with React. I created reusable components and optimized the UI. I was also heavily involved in debugging to improve stability and the overall user experience."
+      },
+      {
+        "question": "Tell me about a difficult technical challenge you solved.",
+        "answer": "In one project we faced a critical performance issue in a high-traffic app. After thorough analysis we found a database bottleneck caused by inefficient queries. I led the refactor of queries, introduced a caching layer with Redis, and optimized indexes, reducing response times by about 90%."
+      },
+      {
+        "question": "How do you handle technical disagreements within your team?",
+        "answer": "I encourage an open, respectful discussion. I listen to all perspectives, request data and proofs of concept to back arguments, and if no clear consensus emerges we decide based on project goals and long-term maintainability. Properly managed disagreements lead to better solutions."
+      }
+    ],
+    "Frontend": [
+      {
+        "question": "Why would you choose Next.js over plain React for a new project?",
+        "answer": "It depends on the project, but I often choose Next.js for built-in optimizations like SSR and SSG that are crucial for SEO and initial performance. Its file-based routing and integrated API routes also speed up full-stack development."
+      },
+      {
+        "question": "What performance optimization strategies do you apply on the frontend?",
+        "answer": "I use lazy loading for images and components, apply React.memo and useCallback to avoid unnecessary re-renders, optimize bundle sizes, and ensure images are compressed and in modern formats. I also monitor Core Web Vitals."
+      },
+      {
+        "question": "What's your experience with state management in React?",
+        "answer": "I've used Redux for large apps, but recently I prefer Zustand or native hooks (useContext/useReducer) for simpler cases. Zustand is great for its minimal setup and power."
+      },
+      {
+        "question": "How do you handle accessibility (a11y) in your projects?",
+        "answer": "Accessibility is essential: I use semantic HTML, manage focus correctly, add ARIA attributes when necessary, and ensure sufficient color contrast. I also run audits with tools like Axe during development."
+      }
+    ],
+    "Backend": [
+      {
+        "question": "Describe your experience building RESTful APIs with Node.js.",
+        "answer": "I've designed and built many RESTful APIs with Node.js and Express. I follow best practices: correct HTTP verbs, proper status codes, clear route structure, and input validation with libraries like Joi or Zod."
+      },
+      {
+        "question": "How have you implemented authentication and authorization?",
+        "answer": "I've implemented JWT-based authentication flows. The typical flow is: the user logs in, receives a signed token stored securely on the client, and sends it in headers for subsequent requests. For authorization, I use middlewares that verify roles and permissions before allowing access to protected routes."
+      },
+      {
+        "question": "What types of databases have you used?",
+        "answer": "I have experience with both SQL and NoSQL databases. I've used PostgreSQL and MySQL for relational needs and MongoDB or Firestore for flexible, scalable use cases. The choice depends on project requirements."
+      }
+    ],
+    "Cloud & DevOps": [
+      {
+        "question": "Describe your experience with CI/CD.",
+        "answer": "I have built CI/CD pipelines using tools like Google Cloud Build and GitHub Actions to automate testing, building, and deployment to staging and production, reducing manual errors and speeding up delivery."
+      },
+      {
+        "question": "What cloud services from AWS or Google Cloud have you used most?",
+        "answer": "In Google Cloud I've used Cloud Run and Compute Engine, and Cloud SQL/BigQuery for databases. In AWS I've used EC2, S3 and Lambda for serverless tasks and storage."
+      },
+      {
+        "question": "Explain your experience with Docker.",
+        "answer": "I use Docker daily to create consistent development environments. I define services in docker-compose to simplify onboarding and deployments, ensuring reproducible setups across environments."
+      }
+    ],
+    "Education & Growth": [
+      {
+        "question": "Why are you training in Data Analysis?",
+        "answer": "I see data analysis as a natural evolution of my Full-Stack profile. Understanding user behavior through data helps build better products and make strategic development decisions. My goal is to close the loop: build the app, measure impact, and use data to improve it."
+      },
+      {
+        "question": "How do you stay updated with new technologies?",
+        "answer": "I'm proactive: I follow reference blogs, subscribe to newsletters, take online courses, and apply what I learn in personal projects. The best way to learn is by building."
+      },
+      {
+        "question": "What's the next thing you'd like to learn?",
+        "answer": "I'm interested in exploring Microservices architectures and orchestration tools like Kubernetes to build more scalable and resilient applications, complementing my DevOps experience."
+      }
+    ],
+    "Personal": [
+      {
+        "question": "What motivates you to work in tech?",
+        "answer": "I love solving problems and building things that bring real value to people. Technology is a powerful tool for that, and its constant evolution keeps me learning."
+      },
+      {
+        "question": "What's a personal project you're proud of?",
+        "answer": "I'm building a small app to manage household tasks and expenses. It has allowed me to experiment with new tools like SvelteKit and edge databases and serves as my personal lab."
+      },
+      {
+        "question": "How do you organize to manage multiple tasks?",
+        "answer": "I plan my week by breaking big tasks into smaller subtasks, prioritize using the Eisenhower matrix, and use tools like Trello or Notion to keep a clear overview."
+      }
+    ]
+  }
+  ,
+  "interview_intro": "Hello! I'm Alberto's virtual assistant. Select a question to start the interview."
+}

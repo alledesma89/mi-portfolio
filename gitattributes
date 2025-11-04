@@ -1,0 +1,12 @@
+# Establece el comportamiento por defecto para todos los archivos.
+# Git intentará adivinar si un archivo es de texto o binario.
+# Los archivos de texto tendrán sus finales de línea normalizados a LF en el repositorio.
+* text=auto
+
+# Declara explícitamente los archivos que siempre deben ser tratados como texto.
+*.js      text
+*.css     text
+*.html    text
+*.json    text
+*.md      text
+*.svg     text

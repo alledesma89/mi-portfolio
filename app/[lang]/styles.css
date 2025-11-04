@@ -1,0 +1,59 @@
+body {
+    font-family: 'Barrio', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .rect-button {
+    position: relative;
+    width: 180px; /* Tamaño del botón */
+    height: 60px; /* Tamaño del botón */
+    background-color: #00b9ff; /* Color de fondo del botón */
+    border: none;
+    border-radius: 10px; /* Bordes redondeados */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    margin: 10px auto; /* Centra el botón en su contenedor */
+    z-index: 10; /* Asegúrate de que los botones estén por encima del video */
+    box-shadow: none; /* Elimina cualquier sombra que pueda parecer una imagen de fondo */
+  }
+  
+  .rect-button:hover {
+    background-color: #ff14fb; /* Cambia el color del fondo al pasar el ratón */
+  }
+  
+  .rect-button span {
+    font-size: 18px; /* Tamaño de la fuente */
+    font-weight: bold; /* Texto en negrita */
+    color: white; /* Color del texto */
+    position: relative; /* Cambia a posición relativa para sobresalir del botón */
+    z-index: 2; /* Asegura que el texto esté siempre encima */
+  }
+  
+  /* Ajustar la cuadrícula */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+    gap: 20px; /* Espacio entre botones */
+    justify-items: end; /* Alinea los botones a la derecha */
+    max-width: 500px; /* Ajusta el ancho máximo del contenedor de botones */
+    margin-right: 20px; /* Alinea los botones a la derecha del contenedor */
+  }
+  
+  /* Centrar el último botón */
+  .col-span-2 {
+    grid-column: span 2; /* Hacer que el último botón ocupe dos columnas */
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+  }
+  
+  /* Asegúrate de que los botones no tengan fondo */
+  .rect-button:focus {
+    outline: none; /* Elimina el borde al hacer foco */
+  }
+  
+  /* Si necesitas añadir más estilos, hazlo aquí */
+  

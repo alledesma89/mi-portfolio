@@ -1,0 +1,29 @@
+{
+  "name": "ct-digital-solutions",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@formatjs/intl-localematcher": "^0.6.2",
+    "autoprefixer": "^10.4.20",
+    "framer-motion": "^7.10.3",
+    "jspdf": "^3.0.3",
+    "negotiator": "^1.0.0",
+    "next": "latest",
+    "nodemailer": "^7.0.3",
+    "postcss": "^8.4.47",
+   "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-chrono": "^2.9.1",
+    "react-icons": "^5.5.0",
+    "react-scroll": "^1.9.3",
+    "swiper": "^11.2.6",
+    "tailwindcss": "^3.4.14"
+  },
+  "engines": {
+    "node": "22.x"
+  }
+}
